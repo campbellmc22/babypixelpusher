@@ -12,7 +12,7 @@ body {
   }
   .box h2 {
     font-size: 20px;
-    color: #ff8598;
+    color: #766DF5;
     text-transform: uppercase;
   }
   .box h2::before {
@@ -74,7 +74,7 @@ body {
     width: 5px;
     height: 100%;
     content: " ";
-    background: #ff8598;
+    background: #766DF5;
   }
   #education li {
     position: relative;
@@ -132,7 +132,7 @@ body {
     margin-bottom: 5px;
     font-size: 20px;
     color: #fff;
-    background: #a75265;
+    background: #171173;
   }
   .item-skills {
     height: 30px;
@@ -144,7 +144,7 @@ body {
     color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: #ff8598;
+    background: #766DF5;
   }
   .job {
     margin-bottom: 15px;
