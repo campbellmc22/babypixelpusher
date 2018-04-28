@@ -212,3 +212,111 @@ body {
     content: "";
     background: url(../img/line.png);
   }
+
+  /*THIS SECTION IS FOR THE PAGINATION*/
+
+  /* GRID */
+
+.twelve { width: 100%; }
+.eleven { width: 91.53%; }
+.ten { width: 83.06%; }
+.nine { width: 74.6%; }
+.eight { width: 66.13%; }
+.seven { width: 57.66%; }
+.six { width: 49.2%; }
+.five { width: 40.73%; }
+.four { width: 32.26%; }
+.three { width: 23.8%; }
+.two { width: 15.33%; }
+.one { width: 6.866%; }
+
+/* COLUMNS */
+
+.col {
+	display: block;
+	float:left;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* GENERAL STYLES */
+
+
+.pagination ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.pagination a{
+  display: inline-block;
+  color: #222;
+
+}
+
+
+.p1 a{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+}
+
+.p1 a.is-active{
+  background-color: #171173;
+  border-radius: 100%;
+  color: #fff;
+}
+
+
+/*Nav CSS*/
+
+#header {
+  position:fixed;
+  width:100%;
+  background:#766DF5;
+  z-index:99;
+  top:0px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.navlinks { float:right;padding:25px; }
+
+.navlinks a {
+  color:#fff;
+  background:#171173;
+  padding:10px 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+}
+
+.navlinks a:hover {
+  padding:20px 15px;
+}
+
+
+
+/*End of Nav CSS*/
