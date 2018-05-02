@@ -257,41 +257,6 @@ body {
     *zoom: 1;
 }
 
-/* GENERAL STYLES */
-
-
-.pagination ul{
-    width: 50%;
-    float: left;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-.pagination a{
-  display: inline-block;
-  color: #222;
-}
-
-.ul sub {
-  width: 50%;
-  float: left;
-}
-
-.p1 a{
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0;
-  text-align: center;
-}
-
-.p1 a.is-active{
-  background-color: #171173;
-  border-radius: 100%;
-  color: #fff;
-}
-
 
 /*Nav CSS*/
 
@@ -315,13 +280,17 @@ body {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-
+  border-radius: 95%;
 }
 
 .navlinks a:hover {
   padding:20px 15px;
 }
 
+a.is-active{
+  background-color: #766DF5;
+  color: #fff;
+}
 
 
 /*End of Nav CSS*/
