@@ -359,10 +359,8 @@ background-color: #f2f2f2;
 background-color: #A8CB7C;
 }
 .points{
-	position: fixed;
-	display: block;
-	top: 5px;
-	right: 30px;
+	text-align:center;
+	cursor:pointer;
 }
 .points ul li{
 	display: inline;
