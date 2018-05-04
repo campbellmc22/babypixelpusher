@@ -339,6 +339,11 @@ html, body, section {
   line-height: 500%;
   margin-bottom: -125px;
 }
+
+.slider span {
+	cursor:default;
+}
+
 #slide1,#slide2,#slide3{
 	width: 33.33333333333333%;
 	height: 100%;
@@ -372,6 +377,7 @@ background-color: #A8CB7C;
 	z-index: 2000;
 	font-size: 10em;
 	top: 50%;
+	cursor:pointer;
 }
 #next{
 	right: 30px;
