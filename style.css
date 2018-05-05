@@ -402,20 +402,16 @@ background-color: #A8CB7C;
 /*Cards CSS*/
 
 #cards {
-  /* position: absolute; */
-  display: flex;
-  flex-wrap: wrap;
-  /* width: 650px; */
-  padding: 1px;
+  padding: 15px;
+ 
 }
 
 #cards > div {
   border: 1px solid #555;
-  flex: 0 0 200px;
   background-color: #ccc;
   height: 200px;
   margin: 1px;
-  font-size: 50px;
+  font-size: 30px;
   line-height:200px;
   text-align: center;
 }
