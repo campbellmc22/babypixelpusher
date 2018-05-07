@@ -269,6 +269,7 @@ body {
   top:0px;
   text-transform:uppercase;
   letter-spacing:1px;
+  z-index: 3000;
 }
 
 .navlinks { float:right;padding:25px; }
