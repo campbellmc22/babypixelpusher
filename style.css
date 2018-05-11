@@ -361,7 +361,7 @@ html, body, section {
 background-image: url("banner-light-affinity-diagram-themes.jpg");
 }
 #slide2{
-background-color: pink;
+  background-image: url("nhmla-image-opaque.png");
 }
 #slide3{
 background-color: #A8CB7C;
@@ -442,7 +442,7 @@ background-color: #A8CB7C;
   background-image: url("banner-light-affinity-diagram-themes.jpg");
   }
 #card2{
-  background-color: pink;
+  background-image: url("nhmla-image-opaque.png");
   }
 #card3{
   background-color: #A8CB7C;
