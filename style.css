@@ -364,7 +364,7 @@ background-image: url("banner-light-affinity-diagram-themes.jpg");
   background-image: url("nhmla-image-opaque.png");
 }
 #slide3{
-background-color: #A8CB7C;
+  background-image: url("doi-wide-opaque.png");
 }
 
 #slide1,#slide2,#slide3 a {
@@ -445,7 +445,7 @@ background-color: #A8CB7C;
   background-image: url("nhmla-image-opaque.png");
   }
 #card3{
-  background-color: #A8CB7C;
+  background-image: url("doi-wide-opaque.png");
   }
  #card4{
   background-color: lightsalmon;
