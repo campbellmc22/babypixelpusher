@@ -1,7 +1,7 @@
 body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     color: #363636;
-    background: #ededed;
+    background: #131212;  
   }
 
 p {
@@ -218,50 +218,7 @@ p {
     background: url(../img/line.png);
   }
 
-  /*THIS SECTION IS FOR THE PAGINATION*/
-
-  /* GRID */
-
-.twelve { width: 100%; }
-.eleven { width: 91.53%; }
-.ten { width: 83.06%; }
-.nine { width: 74.6%; }
-.eight { width: 66.13%; }
-.seven { width: 57.66%; }
-.six { width: 49.2%; }
-.five { width: 40.73%; }
-.four { width: 32.26%; }
-.three { width: 23.8%; }
-.two { width: 15.33%; }
-.one { width: 6.866%; }
-
-/* COLUMNS */
-
-.col {
-	display: block;
-	float:left;
-}
-
-.col:first-of-type {
-  margin-left: 0;
-}
-
-/* CLEARFIX */
-
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
-
+  
 
 /*Nav CSS*/
 
@@ -271,8 +228,15 @@ p {
   background:#766DF5;
   z-index:3000;
   top:0px;
+  left: 0px;
   text-transform:uppercase;
   letter-spacing:1px;
+}
+
+.navheader {
+  float:left;
+  padding: 0 25px;
+  color: #fff;
 }
 
 .navlinks { 
@@ -283,20 +247,17 @@ p {
 .navlinks a {
   width:50%;
   color:#fff;
-  background:#171173;
   padding:10px 15px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border-radius: 95%;
+  text-decoration: none;
 }
 
+
 .navlinks a:hover {
-  padding:20px 15px;
+  color: #171173;
 }
 
 a.is-active{
-  background-color: #766DF5;
+  text-decoration-line: underline;
   color: #fff;
 }
 
@@ -315,6 +276,7 @@ a.is-active{
   display:table-cell;
   vertical-align:middle;
   text-align:center;
+  color: #fff;
 }
 
 .social {
@@ -323,169 +285,38 @@ a.is-active{
 
 .footer {
   margin-top: 2%;
-  background: #fff;
   width:100%;
 }
 
 /*End footer css*/
 
-/*Carousel CSS*/
-html, body, section {
-	padding: 0;
-	margin: 0;
-    min-height: 100% !important;
-    height: 100%;
-    font-size: 16px;
-}
+/* Work Collage */
 
-.slider{
-	width: 300%;
-	height: 100%;
-	text-align: center;
-	font-size: 7em;
-  line-height: 500%;
-  margin-bottom: -200px;
-}
-
-.slider span {
-  cursor:default;
-}
-
-#slide1,#slide2,#slide3{
-	width: 33.33333333333333%;
-	height: 100%;
-  float: left;
-}
-
-#slide1{
-background-image: url("banner-light-affinity-diagram-themes.jpg");
-}
-#slide2{
-  background-image: url("nhmla-image-opaque.png");
-}
-#slide3{
-  background-image: url("doi-wide-opaque.png");
-}
-
-#slide1,#slide2,#slide3 a {
-  text-decoration: none;
-}
-
-.points{
-	text-align:center;
-	cursor:pointer;
-}
-.points ul li{
-	display: inline;
-	font-size: 4em;
-	padding-right: 0.3em;
-}
-.active{
-	color: #777;
-}
-.arrow{
-	position: absolute;
-	z-index: 2000;
-	font-size: 7em;
-	cursor:pointer;
-}
-
-#next{
-	right: 30px;
-}
-#prev{
-	left: 30px;
-}
-#next:hover,#prev:hover{
-  color: #777;
-}
-@media only screen and (max-width: 900px) {
-	body{font-size: 14px;}
-}
-@media only screen and (max-width: 600px) {
-	body{font-size: 12px;}
-}
-@media only screen and (max-width: 400px) {
-	.navlinks{float:left; padding: 25px 0 25px 7px;}
-}
-@media only screen and (max-width: 300px) {
-	body{font-size: 10px;}
-}
-@media only screen and (max-height: 300px) {
-	.arrow{display: none;}
-}
-
-/*Cards CSS*/
-
-#cards {
-  padding: 15px;
-}
-
-#cards > div {
-  border: 1px solid #555;
-  border-radius: 2px;
-  height: 200px;
-  margin: 15px;
-  font-size: 30px;
-  text-align: center;
-}
-
-#cards a {
-  text-decoration: none;
-}
-
-#card1:hover,#card2:hover,#card3:hover,#card4:hover,#card5:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-#card1{
-  background-image: url("banner-light-affinity-diagram-themes.jpg");
-  }
-#card2{
-  background-image: url("nhmla-image-opaque.png");
-  }
-#card3{
-  background-image: url("doi-wide-opaque.png");
-  }
- #card4{
-  background-color: lightsalmon;
-  }
- #card5{
-  background-color: #ccc;
-  }
-
-/*Tiles on Work page*/
-.alltiles {
-  text-align:center;
-}
-
-.tile {
-  background: #ccc;
-  border: 1px solid #555;
-  border-radius: 2px;
+div#work { 
   display: inline-block;
-  height: 300px;
-  margin: 1rem;
-  position: relative;
-  width: 300px;
+  max-width:100%;
+  font-size: 0;  
+  margin-top: 10%;
+}
+div#work a img {  
+  transition: .8s opacity;
+} 
+
+div#work:hover a img { 
+  opacity: 0.3;
+}
+div#work:hover a:hover img { 
+  opacity: 1; 
+} 
+
+/* fallback for earlier versions of Firefox */
+
+@supports not (flex-wrap: wrap) {
+  div#work { display: block; }
+  div#work a img {  
+  display: inline-block;
+  vertical-align: top;
+  }
 }
 
-.tile:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.tile p {
-  font-size: 20px;
-}
-
-/*Messing with stuff*/
-
-.overlay {
-  background: #766DF5;
-  border-radius: 30px;
-  padding: 0 15px;
-}
-
-.overlay:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
+ 

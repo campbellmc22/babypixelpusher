@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Styling -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="bootstrap-grid.css">
+	<link rel="stylesheet" href="style.css">
+		
+	<!--Other important head stuff-->
+	<link rel="icon" href="images/bpp-icon.jpg" type="image/gif" sizes="16x16">
+	<title>Baby Pixel Pusher</title>
+</head>
+
+<body> 
+    <nav>
+        <div id="header">
+			<div class="navheader">
+				<h1>Margaret Campbell</h1>
+			</div>
+			<div class="navlinks">
+                <a class="is-active" href="#">Work</a>
+                <a href="about.html">Life</a>
+            </div>
+        </div>
+        </div>           
+    </nav>
+
+<div style="overflow:hidden;">
+     
+        <div class="slider">
+            <div id="slide1">
+				<a href="https://medium.com/@campbellmc22/case-study-whole-foods-user-research-eb702d91d6c0" target="_blank" style="text-decoration: none;">
+					<span class="overlay">User Research</span>
+				</a>
+			</div>
+			
+			<div id="slide2">
+				<a href="https://medium.com/@campbellmc22/case-study-problem-solving-steps-773e064ad416" target="_blank" style="text-decoration: none;">
+					<span class="overlay">Problem Solving</span>
+				</a>
+			</div>
+
+            <div id="slide3">
+				<a href="https://medium.com/@campbellmc22/case-study-restructuring-the-department-of-the-interior-6af9e951645e" target="_blank" style="text-decoration: none;">
+					<span class="overlay">Architecture</span>
+				</a>
+			</div>
+        </div>
+        <div class="arrow" id="next" data-dir="next">&raquo;</div>
+        <div class="arrow" id="prev" data-dir="prev">&laquo;</div>
+        <div class="points">
+            <ul>
+                <li class="active">&bull;</li>
+                <li>&bull;</li>
+                <li>&bull;</li>
+            </ul>
+        </div>
+</div>
+
+
+    <div class="container" style="margin-top:75px;">
+        <div>
+		    <h1>Personal Statement</h1>    
+                <p>
+					User experience designer; web content and usability writer; design, documentation, and usability testing projects; technical content creation; user advocacy; interface design and client implementation consultant. My five years at Project Insight have led me to human-centered design. I never miss the opportunity to ask the dumb questions. I’m also wrapping up a bootcamp certification in UX/UI from University of California Irvine to enhance my tech skills to include quality design thinking, atomic design, and frontend development. If you think that’s a lot for one person, it will all become clear once we meet. I welcome the opportunity to learn from you.
+				</p>
+        </div>
+	    
+		<div>
+			<h1>Sample Work</h1>
+		</div>	
+			<div class="alltiles">
+			<div class="tile">
+				<p>Coming Soon:<br>Jack's Storyboard</p>
+			</div>
+
+			<div class="tile">
+				<p>Coming Soon:<br>Jack's User Journey</p>
+			</div>
+		
+			<div class="tile">
+				<p>Coming Soon:<br>First Paper Prototypes</p>
+			</div>
+	
+			<div class="tile">
+				<p>Coming Soon:<br>DOI Deliverables</p>
+			</div>
+	
+			<div class="tile">
+				<p>Coming Soon:<br>Sample Wireframes</p>
+			</div>
+	
+			<div class="tile">
+				<p>Coming Soon:<br>Learning to sketch</p>
+			</div>
+			</div>
+	</div>
+
+
+    
+
+
+
+
+
+
+
+
+<!--Java script-->
+
+
+<!--Carousel-->
+<script>
+$(document).ready(function(){
+	
+	function slider(slide,points,arrows,time){
+		this.slide = slide;
+		this.pointsWrap = points.find('ul');
+		this.points = this.pointsWrap.find('li');
+		this.count =this.slide.children().length;
+		this.cur = 0;
+		this.Time = time;
+		this.nextCount = 0;
+		this.prevCount = this.count-1;
+		this.maxlength = this.count*100;
+		this.arrows = arrows;
+		this.interval = 0;
+
+	};
+
+	//active point reset 
+	slider.prototype.pointSelect = function(e,obj){
+		this.points.removeClass('active');
+		this.points.eq(e).addClass('active');
+	};
+	
+	//automatic slider
+
+	slider.prototype.slideinterval=function(obj){
+				this.cur = (this.cur + 1) % this.count;
+				length = this.cur*100;
+				slide = this.slide;
+
+			slide.animate({'marginLeft':'-'+length+'%'});
+			};
+	
+	//pointsclicking slide
+	slider.prototype.pointclicked = function(obj,i){
+			var cur = this.points.index(i),
+				length = cur*100;
+			// alert(cur);
+			this.pointSelect(cur);
+			this.slide.animate({'marginLeft':'-'+length+'%'});
+	};
+		
+	//effect for the arrows slideing
+	slider.prototype.slideEffect = function(e,count){
+			var currentSlide = count*100;
+
+		if(e==='next'){
+
+				this.slide.animate({'marginLeft':'-'+currentSlide+'%'});
+				this.pointSelect(count);
+
+			};
+		if(e==='prev'){
+
+				this.slide.animate({'marginLeft':'-'+currentSlide+'%'});
+				this.pointSelect(count);
+		};	
+	};
+	//arrow clicking slide
+	slider.prototype.arrowclicked = function(obj,e){
+		this.nextCount+=1;
+		var direction = $(e).data('dir'),
+			max= this.count;
+			// alert(direction);
+			(this.nextCount<max)?this.nextCount:this.nextCount=0;
+			(this.prevCount>-1)?this.prevCount:this.prevCount=max-1;
+
+			(direction==='next')?this.slideEffect('next',this.nextCount):this.slideEffect('prev',this.prevCount);
+		
+		this.prevCount-=1;
+	};
+
+	//rendering all functions
+	slider.prototype.render = function(){
+		var obj = this,
+			tm= obj.Time,
+			clear = function(){clearInterval(obj.interval)};
+			inter = function(){
+						obj.slideinterval(obj);
+						obj.pointSelect(obj.cur);
+			};
+	//obj.interval= setInterval(function(){inter()},tm);
+
+	obj.points.on('click',function(){
+		index = this;
+		obj.pointclicked(obj,index);
+		clear();
+		//obj.interval= setInterval(function(){inter()},tm);
+		
+	});
+	obj.arrows.on('click',function(){
+		obj.arrowclicked(obj,this);
+		clear();
+		//obj.interval= setInterval(function(){inter()},tm);
+		
+	});
+	};
+	/*
+	******************************
+	*=object end
+	******************************
+	*/
+
+	$('.slider').css('overflow','hidden');
+	/*$('body').css('overflow','hidden');*/
+
+	var carousel = new slider($('.slider'),$('.points'),$('.arrow'),2000);
+		carousel.render();
+});
+</script>
+
+</body>
