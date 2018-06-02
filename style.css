@@ -1,22 +1,24 @@
 body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    color: #363636;
-    background: #131212;  
+    color: #000000;
+    background: #2c4653;  
   }
 
-p {
-  margin: 0 10%;
-}
+  
+ h1, h2 {
+    color: #f05833;
+  }
+
   .box {
     margin-bottom: 15px;
   }
   .box p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5em;
+    color: #000000;
   }
   .box h2 {
     font-size: 20px;
-    color: #766DF5;
     text-transform: uppercase;
   }
   .box h2::before {
@@ -30,7 +32,7 @@ p {
   .contact-item .icon {
     padding: 10px;
   /*  border-right: 1px solid #aaa;*/
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #e9ddc7;
     opacity: 0.2;
   }
   .contact-item:last-child .icon {
@@ -56,7 +58,7 @@ p {
   }
   .container {
     margin-top: 150px;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
     background: #fff;
   }
 
@@ -124,8 +126,11 @@ p {
   }
   #funfacts .fact {
     padding-bottom: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
     margin: 10px 0;
     font-size: 22px;
+    text-align: left;
 /*     border-bottom: 1px solid #eee; */
   }
   .hobby {
@@ -136,7 +141,7 @@ p {
     margin-bottom: 5px;
     font-size: 20px;
     color: #fff;
-    background: #171173;
+    background: #008b8b;
   }
   .item-skills {
     height: 30px;
@@ -148,7 +153,7 @@ p {
     color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: #766DF5;
+    background: #0e4d6c;
   }
   .job {
     margin-bottom: 15px;
@@ -167,7 +172,7 @@ p {
     height: 160px;
     padding: 5px;
     overflow: hidden;
-    background: #ededed;
+    background: #e9ddc7;
     border-radius: 50%;
   }
   #photo img {
@@ -225,7 +230,7 @@ p {
 #header {
   position:fixed;
   width:100%;
-  background:#766DF5;
+  background:#0e4d6c;
   z-index:3000;
   top:0px;
   left: 0px;
@@ -233,10 +238,12 @@ p {
   letter-spacing:1px;
 }
 
+
 .navheader {
   float:left;
   padding: 0 25px;
-  color: #fff;
+  color: #f05833;
+  cursor: default;
 }
 
 .navlinks { 
@@ -246,18 +253,14 @@ p {
 
 .navlinks a {
   width:50%;
-  color:#fff;
+  color:#f05833;
   padding:10px 15px;
   text-decoration: none;
 }
 
 
-.navlinks a:hover {
-  color: #171173;
-}
-
 a.is-active{
-  text-decoration-line: underline;
+  cursor: default;
   color: #fff;
 }
 
@@ -288,6 +291,15 @@ a.is-active{
   width:100%;
 }
 
+footer p {
+  color: #ffffff;
+}
+
+footer a {
+  color: #f05833;
+}
+
+
 /*End footer css*/
 
 /* Work Collage */
@@ -304,6 +316,7 @@ div#work {
   display: -webkit-box;
   display: flex;
 }
+
 #work div { 
   -webkit-box-flex: auto;
   -ms-flex: auto;
