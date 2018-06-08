@@ -7,6 +7,7 @@ body {
   
  h1, h2 {
     color: #f05833;
+    font-family: 'Signika', sans-serif;
   }
 
   .box {
@@ -206,7 +207,6 @@ body {
     font-size: 1.5em;
     font-weight: 800;
     line-height: 1.5em;
-    letter-spacing: -4px;
   }
   #text-header h1 sup {
     opacity: 0.5;
@@ -230,7 +230,7 @@ body {
 #header {
   position:fixed;
   width:100%;
-  background:#0e4d6c;
+  background:#2c4653;
   z-index:3000;
   top:0px;
   left: 0px;
@@ -249,6 +249,7 @@ body {
 .navlinks { 
   float:right;
   padding:25px;
+  font-family: 'Signika', sans-serif;
 }
 
 .navlinks a {
@@ -297,6 +298,7 @@ footer p {
 
 footer a {
   color: #f05833;
+  font-family: 'Signika', sans-serif;
 }
 
 
@@ -305,7 +307,6 @@ footer a {
 /* Work Collage */
 
 div#work { 
-  margin-top: 10%;
   padding: .5vw;
   font-size: 0;
   display: -ms-flexbox;
